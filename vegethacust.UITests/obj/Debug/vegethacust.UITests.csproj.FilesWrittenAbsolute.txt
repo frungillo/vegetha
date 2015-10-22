@@ -1,0 +1,7 @@
+/Users/Genny/Projects/vegetha/vegethacust.UITests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/Genny/Projects/vegetha/vegethacust.UITests/bin/Debug/vegethacust.UITests.dll.mdb
+/Users/Genny/Projects/vegetha/vegethacust.UITests/bin/Debug/vegethacust.UITests.dll
+/Users/Genny/Projects/vegetha/vegethacust.UITests/obj/Debug/vegethacust.UITests.dll
+/Users/Genny/Projects/vegetha/vegethacust.UITests/obj/Debug/vegethacust.UITests.dll.mdb
+/Users/Genny/Projects/vegetha/vegethacust.UITests/bin/Debug/Xamarin.UITest.dll
+/Users/Genny/Projects/vegetha/vegethacust.UITests/bin/Debug/nunit.framework.dll

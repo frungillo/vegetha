@@ -68,6 +68,18 @@ namespace vegethacust
 			return ls;
 		}
 
+		public static List<customers> GetByCognomeNome(string Cognome, string Nome) {
+			List<customers> ls = new List<customers> ();
+			string dbPath = Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db");
+			var db = new SQLiteConnection (dbPath);
+			var selezione = db.Query<customers> ("select * from customers where cognome = '" + Cognome.ToUpper () +
+			                "' and nome = '" + Nome.ToUpper () + "'", null);
+			foreach (var s in selezione) {
+				ls.Add (s);	
+			};
+			return ls;
+		}
+
 	}
 }
 

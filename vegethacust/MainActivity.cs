@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace vegethacust
 {
-	[Activity (Label = "vegethacust", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Vegetha CM", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		
@@ -19,8 +19,8 @@ namespace vegethacust
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
+			customers.CreaMaster();
 
 			// Get our button from the layout resource,
 			// and attach an event to it
@@ -28,6 +28,9 @@ namespace vegethacust
 			Button btnLeggi = FindViewById<Button> (Resource.Id.btnLeggi);
 			TextView txtMonitor = FindViewById<TextView> (Resource.Id.txtMonitor);
 			button.Click += delegate {
+				Intent frmAggiungi = new Intent(this, typeof(frmAggiungiUtente));
+				StartActivity(frmAggiungi);
+				/*
 				customers.CreaMaster();
 				customers c = new customers();
 				c.Cognome = "La Matta";
@@ -36,8 +39,7 @@ namespace vegethacust
 				c.Tipo = "T";
 				c.Numero_tessera = 11584;
 				c.Aggiungi();
-
-
+				*/
 			};
 
 			btnLeggi.Click+= delegate {

@@ -1,3 +1,8 @@
-C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust\bin\Debug\vegethacust.dll
-C:\Users\frungillo\Documents\Projects\vegethacust\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll
-C:\Users\frungillo\Documents\Projects\vegethacust\packages\Xamarin.Android.Support.v7.AppCompat.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/vegethacust.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/System.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/System.Xml.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/Mono.Android.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/Xamarin.Android.Support.v4.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/Xamarin.Android.Support.v7.AppCompat.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/System.Core.dll
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/assemblies/mscorlib.dll
