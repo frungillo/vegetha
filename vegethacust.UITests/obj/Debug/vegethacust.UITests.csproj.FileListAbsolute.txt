@@ -1,0 +1,9 @@
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\bin\Debug\vegethacust.UITests.dll
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\bin\Debug\vegethacust.UITests.pdb
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\bin\Debug\nunit.framework.dll
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\bin\Debug\Xamarin.UITest.dll
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\bin\Debug\Xamarin.UITest.xml
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\bin\Debug\nunit.framework.xml
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\obj\Debug\vegethacust.UITests.csprojResolveAssemblyReference.cache
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\obj\Debug\vegethacust.UITests.dll
+C:\Users\frungillo\Documents\Projects\vegethacust\vegethacust.UITests\obj\Debug\vegethacust.UITests.pdb

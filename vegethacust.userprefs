@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="vegethacust\vegethacust.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_10" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="vegethacust\MainActivity.cs">
+    <Files>
+      <File FileName="vegethacust\MainActivity.cs" Line="39" Column="5" />
+      <File FileName="vegethacust\customers.cs" Line="68" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.vegethacust AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
