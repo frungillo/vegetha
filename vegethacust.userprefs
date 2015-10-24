@@ -1,10 +1,10 @@
-﻿<Properties StartupItem="vegethacust/vegethacust.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Lollipop" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="vegethacust/customers.cs">
+﻿<Properties StartupItem="vegethacust/vegethacust.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.e3a1ad30" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="vegethacust/frmAggiungiUtente.cs">
     <Files>
-      <File FileName="vegethacust/customers.cs" Line="62" Column="95" />
-      <File FileName="vegethacust/MainActivity.cs" Line="23" Column="27" />
-      <File FileName="vegethacust/frmAggiungiUtente.cs" Line="56" Column="1" />
+      <File FileName="vegethacust/customers.cs" Line="66" Column="20" />
+      <File FileName="vegethacust/MainActivity.cs" Line="56" Column="4" />
+      <File FileName="vegethacust/frmAggiungiUtente.cs" Line="79" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

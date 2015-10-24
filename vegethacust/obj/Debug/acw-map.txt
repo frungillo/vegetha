@@ -6,6 +6,10 @@ vegethacust.frmAggiungiUtente, vegethacust;md55cba8bffb237ec128f110e4014293656.f
 vegethacust.frmAggiungiUtente, vegethacust, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md55cba8bffb237ec128f110e4014293656.frmAggiungiUtente
 vegethacust.frmAggiungiUtente;md55cba8bffb237ec128f110e4014293656.frmAggiungiUtente
 vegethacust.frmAggiungiUtente;md55cba8bffb237ec128f110e4014293656.frmAggiungiUtente
+vegethacust.ClientiListAdapter, vegethacust;md55cba8bffb237ec128f110e4014293656.ClientiListAdapter
+vegethacust.ClientiListAdapter, vegethacust, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md55cba8bffb237ec128f110e4014293656.ClientiListAdapter
+vegethacust.ClientiListAdapter;md55cba8bffb237ec128f110e4014293656.ClientiListAdapter
+vegethacust.ClientiListAdapter;md55cba8bffb237ec128f110e4014293656.ClientiListAdapter
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor

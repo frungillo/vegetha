@@ -18,3 +18,5 @@
 /Users/Genny/Projects/vegetha/vegethacust/bin/Debug/Xamarin.Android.Support.v4.dll
 /Users/Genny/Projects/vegetha/vegethacust/bin/Debug/Xamarin.Android.Support.v7.AppCompat.dll
 /Users/Genny/Projects/vegetha/vegethacust/obj/Debug/res/layout/frmaggiungiutente.xml
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/res/drawable-xxxhdpi/vegetha_512.png
+/Users/Genny/Projects/vegetha/vegethacust/obj/Debug/res/drawable-xhdpi/vegetha_logo_1.png
