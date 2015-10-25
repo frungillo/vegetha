@@ -52,7 +52,12 @@ namespace vegethacust
 			txtRicerca.TextChanged += TxtRicerca_TextChanged;
 			lstClienti.ItemClick += LstClienti_ItemClick;
 
-			lstClienti.Adapter = new ClientiListAdapter(this,  customers.GetTutti());
+			if (this.Intent.HasExtra ("cerca")) {
+				txtRicerca.Text = "scad:" + this.Intent.GetStringExtra ("cerca");
+				lstClienti.Adapter = new ClientiListAdapter (this, customers.GetByValues (txtRicerca.Text));
+			} else {
+				lstClienti.Adapter = new ClientiListAdapter (this, customers.GetTutti ());
+			}
 
 		}
 

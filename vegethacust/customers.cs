@@ -116,7 +116,13 @@ namespace vegethacust
 			List<customers> ls = new List<customers> ();
 			string dbPath = Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db");
 			var db = new SQLiteConnection (dbPath);
-			ls = db.Query<customers> ("select * from customers where Cognome like '%"+cerca+"%' or Nome like '%"+cerca+"%' or _numero_tessera ='"+cerca+"' order by 2,3,5", new String[] {});
+			if (cerca.ToLower().StartsWith("scad:")) {
+				string dt = cerca.ToLower ().Replace ("scad:", "").Trim();
+				ls = db.Query<customers> ("select * from customers where DataScadenza = '"+dt+"' order by 2,3,5", new String[] {});
+			} else {
+				ls = db.Query<customers> ("select * from customers where Cognome like '%"+cerca+"%' or Nome like '%"+cerca+"%' or _numero_tessera ='"+cerca+"' order by 2,3,5", new String[] {});
+			}
+
 			return ls;
 		}
 
