@@ -1365,14 +1365,17 @@ namespace vegethacust
 			// aapt resource value: 0x7f02003d
 			public const int Icon = 2130837565;
 			
-			// aapt resource value: 0x7f020040
-			public const int notification_template_icon_bg = 2130837568;
+			// aapt resource value: 0x7f020041
+			public const int notification_template_icon_bg = 2130837569;
 			
 			// aapt resource value: 0x7f02003e
 			public const int vegetha_512 = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
 			public const int vegetha_logo_1 = 2130837567;
+			
+			// aapt resource value: 0x7f020040
+			public const int vegetha_logo_120 = 2130837568;
 			
 			static Drawable()
 			{
@@ -1387,8 +1390,8 @@ namespace vegethacust
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b006c
-			public const int action0 = 2131427436;
+			// aapt resource value: 0x7f0b0070
+			public const int action0 = 2131427440;
 			
 			// aapt resource value: 0x7f0b003e
 			public const int action_bar = 2131427390;
@@ -1414,8 +1417,8 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b003f
 			public const int action_context_bar = 2131427391;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int action_divider = 2131427440;
+			// aapt resource value: 0x7f0b0074
+			public const int action_divider = 2131427444;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int action_menu_divider = 2131427330;
@@ -1447,11 +1450,14 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b0066
 			public const int btnAnnulla = 2131427430;
 			
+			// aapt resource value: 0x7f0b006a
+			public const int btnDieta = 2131427434;
+			
 			// aapt resource value: 0x7f0b0067
 			public const int btnElimina = 2131427431;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int btnLeggi = 2131427432;
+			// aapt resource value: 0x7f0b006c
+			public const int btnLeggi = 2131427436;
 			
 			// aapt resource value: 0x7f0b0060
 			public const int btnPuoScadere = 2131427424;
@@ -1459,17 +1465,20 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b0065
 			public const int btnSalva = 2131427429;
 			
+			// aapt resource value: 0x7f0b0069
+			public const int btnScheda = 2131427433;
+			
 			// aapt resource value: 0x7f0b0034
 			public const int buttonPanel = 2131427380;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int cancel_action = 2131427437;
+			// aapt resource value: 0x7f0b0071
+			public const int cancel_action = 2131427441;
 			
 			// aapt resource value: 0x7f0b0036
 			public const int checkbox = 2131427382;
 			
-			// aapt resource value: 0x7f0b0073
-			public const int chronometer = 2131427443;
+			// aapt resource value: 0x7f0b0077
+			public const int chronometer = 2131427447;
 			
 			// aapt resource value: 0x7f0b001c
 			public const int collapseActionView = 2131427356;
@@ -1501,8 +1510,8 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b0019
 			public const int end = 2131427353;
 			
-			// aapt resource value: 0x7f0b0078
-			public const int end_padder = 2131427448;
+			// aapt resource value: 0x7f0b007c
+			public const int end_padder = 2131427452;
 			
 			// aapt resource value: 0x7f0b0025
 			public const int expand_activities_button = 2131427365;
@@ -1531,14 +1540,17 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b004d
 			public const int imageView1 = 2131427405;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int info = 2131427447;
+			// aapt resource value: 0x7f0b006b
+			public const int imageView2 = 2131427435;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int line1 = 2131427441;
+			// aapt resource value: 0x7f0b007b
+			public const int info = 2131427451;
 			
 			// aapt resource value: 0x7f0b0075
-			public const int line3 = 2131427445;
+			public const int line1 = 2131427445;
+			
+			// aapt resource value: 0x7f0b0079
+			public const int line3 = 2131427449;
 			
 			// aapt resource value: 0x7f0b004e
 			public const int linearLayout1 = 2131427406;
@@ -1561,17 +1573,20 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b005e
 			public const int linearLayout7 = 2131427422;
 			
+			// aapt resource value: 0x7f0b0068
+			public const int linearLayout8 = 2131427432;
+			
 			// aapt resource value: 0x7f0b0009
 			public const int listMode = 2131427337;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int listView1 = 2131427435;
+			// aapt resource value: 0x7f0b006f
+			public const int listView1 = 2131427439;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int list_item = 2131427368;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int media_actions = 2131427439;
+			// aapt resource value: 0x7f0b0073
+			public const int media_actions = 2131427443;
 			
 			// aapt resource value: 0x7f0b001a
 			public const int middle = 2131427354;
@@ -1579,8 +1594,8 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b0013
 			public const int multiply = 2131427347;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int myButton = 2131427433;
+			// aapt resource value: 0x7f0b006d
+			public const int myButton = 2131427437;
 			
 			// aapt resource value: 0x7f0b001e
 			public const int never = 2131427358;
@@ -1672,8 +1687,8 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b0017
 			public const int src_over = 2131427351;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int status_bar_latest_event_content = 2131427438;
+			// aapt resource value: 0x7f0b0072
+			public const int status_bar_latest_event_content = 2131427442;
 			
 			// aapt resource value: 0x7f0b0049
 			public const int submit_area = 2131427401;
@@ -1681,11 +1696,11 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b000b
 			public const int tabMode = 2131427339;
 			
-			// aapt resource value: 0x7f0b0076
-			public const int text = 2131427446;
+			// aapt resource value: 0x7f0b007a
+			public const int text = 2131427450;
 			
-			// aapt resource value: 0x7f0b0074
-			public const int text2 = 2131427444;
+			// aapt resource value: 0x7f0b0078
+			public const int text2 = 2131427448;
 			
 			// aapt resource value: 0x7f0b0031
 			public const int textSpacerNoButtons = 2131427377;
@@ -1708,8 +1723,8 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b0062
 			public const int textView6 = 2131427426;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int time = 2131427442;
+			// aapt resource value: 0x7f0b0076
+			public const int time = 2131427446;
 			
 			// aapt resource value: 0x7f0b002a
 			public const int title = 2131427370;
@@ -1729,8 +1744,8 @@ namespace vegethacust
 			// aapt resource value: 0x7f0b005b
 			public const int txtNumeroTessera = 2131427419;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int txtRicerca = 2131427434;
+			// aapt resource value: 0x7f0b006e
+			public const int txtRicerca = 2131427438;
 			
 			// aapt resource value: 0x7f0b0063
 			public const int txtSaldo = 2131427427;

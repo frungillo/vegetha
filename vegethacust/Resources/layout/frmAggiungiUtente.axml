@@ -201,5 +201,23 @@
                 android:id="@+id/btnElimina"
                 android:layout_weight="0.3" />
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout8">
+            <Button
+                android:text="Scheda"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnScheda"
+                android:layout_weight="0.5" />
+            <Button
+                android:text="Dieta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnDieta"
+                android:layout_weight="0.5" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

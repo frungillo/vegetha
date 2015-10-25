@@ -45,8 +45,8 @@ namespace vegethacust
 
 			btnLeggi.Click+= delegate {
 				
-				List<customers> ls = customers.GetTutti();
-				lstClienti.Adapter = new ClientiListAdapter(this, ls);
+				txtRicerca.Text = "scad:" + DateTime.Now.ToShortDateString();
+				lstClienti.Adapter = new ClientiListAdapter (this, customers.GetByValues (txtRicerca.Text));
 
 			};
 			txtRicerca.TextChanged += TxtRicerca_TextChanged;

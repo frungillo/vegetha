@@ -59,7 +59,6 @@
     <Compile Include="frmAggiungiUtente.cs" />
     <Compile Include="funzioni.cs" />
     <Compile Include="ClientiListAdapter.cs" />
-    <Compile Include="serviceControlloVegetha.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -78,6 +77,7 @@
     <AndroidResource Include="Resources\layout\frmAggiungiUtente.axml" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\vegetha_512.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\vegetha_logo_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\vegetha_logo_120.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

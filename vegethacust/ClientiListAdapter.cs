@@ -28,16 +28,22 @@ namespace vegethacust
 			View view = convertView;
 			if (view == null)
 				view = context.LayoutInflater.Inflate (Android.Resource.Layout.TwoLineListItem, null);
-			view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = clienti [position].Cognome + " " + clienti [position].Nome;
-			string Tipo = "";
-			if (clienti [position].Tipo == "A") {
-				Tipo = "Ann.";
+			if (clienti.Length > 0) {
+				view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = clienti [position].Cognome + " " + clienti [position].Nome;
+				string Tipo = "";
+				if (clienti [position].Tipo == "A") {
+					Tipo = "Ann.";
 
+				} else {
+					Tipo = "Tri.";
+				}
+				view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "Scheda [" + clienti [position].Numero_tessera + "] ("
+				+ Tipo + ") Iscr." + clienti [position].DataIscrizione.ToShortDateString ();
 			} else {
-				Tipo = "Tri.";
+				view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = "Nessun cliente trovato...";
+				view.FindViewById<TextView> (Android.Resource.Id.Text1).TextAlignment = TextAlignment.Center;
+			
 			}
-			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "Scheda [" + clienti [position].Numero_tessera + "] (" 
-				+ Tipo + ") Iscr."+clienti[position].DataIscrizione.ToShortDateString();
 			return view;
 		}
 		public override int Count {
