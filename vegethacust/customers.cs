@@ -118,7 +118,20 @@ namespace vegethacust
 			var db = new SQLiteConnection (dbPath);
 			if (cerca.ToLower().StartsWith("scad:")) {
 				string dt = cerca.ToLower ().Replace ("scad:", "").Trim();
-				ls = db.Query<customers> ("select * from customers where DataScadenza = '"+dt+"' order by 2,3,5", new String[] {});
+				try {
+					DateTime data = DateTime.Parse (dt);
+
+					List<customers> templs = db.Query<customers> ("select * from customers  order by 2,3,5", new String[] {});
+					foreach (customers	item in templs) {
+						if (item.DataScadenza <= data) {
+							ls.Add (item);
+						}
+					}	
+				} catch (Exception ex) {
+					
+				}
+
+
 			} else {
 				ls = db.Query<customers> ("select * from customers where Cognome like '%"+cerca+"%' or Nome like '%"+cerca+"%' or _numero_tessera ='"+cerca+"' order by 2,3,5", new String[] {});
 			}

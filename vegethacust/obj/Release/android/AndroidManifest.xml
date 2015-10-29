@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.vegetha.customers">
+  <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
+  <application android:label="vegetha cust" android:icon="@drawable/vegetha_512" android:name="mono.android.app.Application">
+    <activity android:icon="@drawable/vegetha_512" android:label="Vegetha CM" android:name="md55cba8bffb237ec128f110e4014293656.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="frmAggiungiUtente" android:noHistory="true" android:name="md55cba8bffb237ec128f110e4014293656.frmAggiungiUtente" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.vegetha.customers.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>
