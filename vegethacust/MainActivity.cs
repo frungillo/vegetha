@@ -31,16 +31,7 @@ namespace vegethacust
 			button.Click += delegate {
 				Intent frmAggiungi = new Intent(this, typeof(frmAggiungiUtente));
 				StartActivityForResult(frmAggiungi,0);
-				/*
-				customers.CreaMaster();
-				customers c = new customers();
-				c.Cognome = "La Matta";
-				c.Nome = "Sabrina";
-				c.DataIscrizione = new DateTime(2015,10,02);
-				c.Tipo = "T";
-				c.Numero_tessera = 11584;
-				c.Aggiungi();
-				*/
+
 			};
 
 			btnLeggi.Click+= delegate {

@@ -28,6 +28,7 @@ namespace vegethacust
 		string numtessera;
 		bool insertMode = true;
 		bool puoScadere = true;
+		bool richiestaUscita = false;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -64,7 +65,7 @@ namespace vegethacust
 				funzioni.MsgBox(this,"Annullare l'inserimento (Tutti i dati non salvati andranno persi!) ?",
 					"Vegetha",
 					"SI",
-					()=>{SetResult(Result.Ok); Finish();},
+					()=>{SetResult(Result.Ok); richiestaUscita = true; Finish(); },
 					"NO",
 					()=>{});
 
@@ -75,7 +76,8 @@ namespace vegethacust
 			radioTipo.CheckedChange += (sender, e) => {
 				valutaScadenza ();
 			};
-
+			radioTipo.Check( Resource.Id.radioAnnuale);
+			valutaScadenza ();
 		}
 
 		void BtnScade_CheckedChange (object sender, CompoundButton.CheckedChangeEventArgs e)
@@ -87,8 +89,10 @@ namespace vegethacust
 			if (btnScade.Checked) {
 				if (radioTipo.CheckedRadioButtonId == Resource.Id.radioAnnuale) {
 					txtDataScadenza.Text = "Scadenza: " + dataIscrizione.DateTime.AddMonths (12).ToShortDateString ();
-				} else {
+				} else if (radioTipo.CheckedRadioButtonId == Resource.Id.radioTrimestrale) {
 					txtDataScadenza.Text = "Scadenza: " + dataIscrizione.DateTime.AddMonths (3).ToShortDateString ();
+				} else {
+					txtDataScadenza.Text = "Scadenza: " + dataIscrizione.DateTime.AddMonths (1).ToShortDateString ();
 				}
 			} else {
 				txtDataScadenza.Text = "Abbonamento perpetuo";
@@ -159,8 +163,10 @@ namespace vegethacust
 			txtSaldo.Text = c.Saldo.ToString ();
 			if (c.Tipo == "A") {
 				radioTipo.Check (Resource.Id.radioAnnuale);
-			} else {
+			} else if (c.Tipo == "T") {
 				radioTipo.Check (Resource.Id.radioTrimestrale);
+			} else {
+				radioTipo.Check (Resource.Id.RadioMensile);
 			}
 			valutaScadenza();
 		}
@@ -176,9 +182,12 @@ namespace vegethacust
 			if (radioTipo.CheckedRadioButtonId == Resource.Id.radioAnnuale) {
 				c.Tipo = "A";
 				c.DataScadenza = c.DataIscrizione.AddMonths (12);
-			} else {
+			} else if (radioTipo.CheckedRadioButtonId == Resource.Id.radioTrimestrale) {
 				c.Tipo = "T";
 				c.DataScadenza = c.DataIscrizione.AddMonths (3);
+			} else {
+				c.Tipo = "M";
+				c.DataScadenza = c.DataIscrizione.AddMonths (1);
 			}
 			try {
 				if(insertMode){
@@ -214,10 +223,24 @@ namespace vegethacust
 			funzioni.MsgBox(this,"Annullare l'inserimento (Tutti i dati non salvati andranno persi!) ?",
 				"Vegetha",
 				"SI",
-				()=>{SetResult(Result.Ok);Finish();},
+				()=>{SetResult(Result.Ok);richiestaUscita = true;Finish();},
 				"NO",
 				()=>{});
 		}
+
+
+
+		protected override void OnPause ()
+		{
+			if (richiestaUscita) {
+				base.OnPause ();
+			} 
+		}
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+		}
+
 	}
 }
 

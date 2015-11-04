@@ -34,8 +34,10 @@ namespace vegethacust
 				if (clienti [position].Tipo == "A") {
 					Tipo = "Ann.";
 
-				} else {
+				} else if (clienti [position].Tipo == "T") {
 					Tipo = "Tri.";
+				} else {
+					Tipo = "Mens.";
 				}
 				view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "Scheda [" + clienti [position].Numero_tessera + "] ("
 				+ Tipo + ") Iscr." + clienti [position].DataIscrizione.ToShortDateString ();
