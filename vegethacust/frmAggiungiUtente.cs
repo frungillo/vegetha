@@ -14,7 +14,7 @@ using Android.Views.InputMethods;
 
 namespace vegethacust
 {
-	[Activity (Label = "frmAggiungiUtente", NoHistory=true)]			
+	[Activity (Label = "frmAggiungiUtente", NoHistory=false)]			
 	public class frmAggiungiUtente : Activity
 	{
 		EditText txtCognome;
@@ -28,7 +28,6 @@ namespace vegethacust
 		string numtessera;
 		bool insertMode = true;
 		bool puoScadere = true;
-		bool richiestaUscita = false;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -41,6 +40,9 @@ namespace vegethacust
 			txtNumeroTessera = FindViewById<EditText> (Resource.Id.txtNumeroTessera);
 			radioTipo = FindViewById<RadioGroup> (Resource.Id.gruppoTipi);
 			dataIscrizione = FindViewById<DatePicker> (Resource.Id.datePicker1);
+			dataIscrizione.Init (DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,new DateChangedListener((picker, year, month, day) => { 
+				valutaScadenza();	
+			}));
 			txtSaldo = FindViewById<EditText> (Resource.Id.txtSaldo);
 			txtDataScadenza = FindViewById<TextView> (Resource.Id.txtScadenza);
 
@@ -65,7 +67,7 @@ namespace vegethacust
 				funzioni.MsgBox(this,"Annullare l'inserimento (Tutti i dati non salvati andranno persi!) ?",
 					"Vegetha",
 					"SI",
-					()=>{SetResult(Result.Ok); richiestaUscita = true; Finish(); },
+					()=>{SetResult(Result.Ok);  Finish(); },
 					"NO",
 					()=>{});
 
@@ -78,7 +80,13 @@ namespace vegethacust
 			};
 			radioTipo.Check( Resource.Id.radioAnnuale);
 			valutaScadenza ();
+		
+
 		}
+
+	
+
+
 
 		void BtnScade_CheckedChange (object sender, CompoundButton.CheckedChangeEventArgs e)
 		{
@@ -223,24 +231,30 @@ namespace vegethacust
 			funzioni.MsgBox(this,"Annullare l'inserimento (Tutti i dati non salvati andranno persi!) ?",
 				"Vegetha",
 				"SI",
-				()=>{SetResult(Result.Ok);richiestaUscita = true;Finish();},
+				()=>{SetResult(Result.Ok);Finish();},
 				"NO",
 				()=>{});
 		}
 
 
 
-		protected override void OnPause ()
-		{
-			if (richiestaUscita) {
-				base.OnPause ();
-			} 
-		}
-		protected override void OnResume ()
-		{
-			base.OnResume ();
-		}
+
 
 	}
+
+	class DateChangedListener : Java.Lang.Object, DatePicker.IOnDateChangedListener { 
+
+		Action<DatePicker, int, int, int> callback; 
+
+		public DateChangedListener (Action<DatePicker, int, int, int> callback) 
+		{ 
+			this.callback = callback; 
+		} 
+
+		public void OnDateChanged (DatePicker view, int year, int monthOfYear, int dayOfMonth) 
+		{ 
+			callback (view, year, monthOfYear, dayOfMonth); 
+		} 
+	} 
 }
 

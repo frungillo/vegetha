@@ -1,16 +1,16 @@
 ﻿<Properties StartupItem="vegethacust/vegethacust.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.e3a1ad30" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="vegethacust/frmAggiungiUtente.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.e3a1ad30" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="vegethacust/customers.cs" Line="131" Column="6" />
-      <File FileName="vegethacust/MainActivity.cs" Line="34" Column="5" />
-      <File FileName="vegethacust/frmAggiungiUtente.cs" Line="237" Column="6" />
-      <File FileName="vegethacust/ClientiListAdapter.cs" Line="40" Column="21" />
+      <File FileName="vegethacust/customers.cs" Line="1" Column="1" />
+      <File FileName="vegethacust/MainActivity.cs" Line="21" Column="1" />
+      <File FileName="vegethacust/frmAggiungiUtente.cs" Line="44" Column="22" />
+      <File FileName="vegethacust/ClientiListAdapter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.vegethacust AndroidDesignerPreferredDevice="5.1&quot; WVGA" AndroidDesignerPreferredTheme="Theme.Holo.Light.Dialog.NoActionBar" />
+  <MonoDevelop.Ide.ItemProperties.vegethacust AndroidDesignerPreferredDevice="Samsung Grand Prime" AndroidDesignerPreferredTheme="Theme.Holo.Light.NoActionBar" />
 </Properties>

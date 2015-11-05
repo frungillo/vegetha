@@ -30,7 +30,7 @@ namespace vegethacust
 			txtRicerca = FindViewById<EditText> (Resource.Id.txtRicerca);
 			button.Click += delegate {
 				Intent frmAggiungi = new Intent(this, typeof(frmAggiungiUtente));
-				StartActivityForResult(frmAggiungi,0);
+				StartActivity(frmAggiungi);
 
 			};
 
@@ -57,15 +57,23 @@ namespace vegethacust
 		   customers c = lstClienti.GetItemAtPosition (e.Position).Cast<customers> ();
 			Intent frmAggiungi = new Intent (this, typeof(frmAggiungiUtente));
 			frmAggiungi.PutExtra ("numtessera", c.Numero_tessera);
-			StartActivityForResult (frmAggiungi,0);
+			StartActivity (frmAggiungi);
 		}
-
+		/*
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
 			if (resultCode == Result.Ok) {
 				List<customers> ls = customers.GetTutti();
 				lstClienti.Adapter = new ClientiListAdapter(this, ls);
 			}
+		}
+		*/
+
+		protected override void OnResume ()
+		{
+			List<customers> ls = customers.GetTutti();
+			lstClienti.Adapter = new ClientiListAdapter(this, ls);
+			base.OnResume ();
 		}
 
 		void TxtRicerca_TextChanged (object sender, Android.Text.TextChangedEventArgs e)
