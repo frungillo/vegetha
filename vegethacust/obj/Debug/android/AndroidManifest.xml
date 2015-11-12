@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.vegetha.customers">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.1" package="com.vegetha.customers" android:versionCode="2">
   <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
   <application android:label="vegetha cust" android:icon="@drawable/vegetha_512" android:name="mono.android.app.Application" android:debuggable="true">
     <activity android:icon="@drawable/vegetha_512" android:label="Vegetha CM" android:name="md55cba8bffb237ec128f110e4014293656.MainActivity">

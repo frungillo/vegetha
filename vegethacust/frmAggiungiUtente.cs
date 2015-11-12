@@ -186,6 +186,8 @@ namespace vegethacust
 			c.DataIscrizione = dataIscrizione.DateTime;
 			c.Numero_tessera = int.Parse(txtNumeroTessera.Text);
 			c.puoScadere = btnScade.Checked;
+			if (txtSaldo.Text == "")
+				txtSaldo.Text = "0";
 			c.Saldo = Double.Parse (txtSaldo.Text);
 			if (radioTipo.CheckedRadioButtonId == Resource.Id.radioAnnuale) {
 				c.Tipo = "A";
