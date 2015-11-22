@@ -12,7 +12,7 @@ public class ViewStubCompat_OnInflateListenerImplementor
 		__md_methods = 
 			"n_onInflate:(Landroid/support/v7/internal/widget/ViewStubCompat;Landroid/view/View;)V:GetOnInflate_Landroid_support_v7_internal_widget_ViewStubCompat_Landroid_view_View_Handler:Android.Support.V7.Internal.Widget.ViewStubCompat/IOnInflateListenerInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
 			"";
-		mono.android.Runtime.register ("Android.Support.V7.Internal.Widget.ViewStubCompat/IOnInflateListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ViewStubCompat_OnInflateListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Support.V7.Internal.Widget.ViewStubCompat+IOnInflateListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ViewStubCompat_OnInflateListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class ViewStubCompat_OnInflateListenerImplementor
 	{
 		super ();
 		if (getClass () == ViewStubCompat_OnInflateListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Support.V7.Internal.Widget.ViewStubCompat/IOnInflateListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Support.V7.Internal.Widget.ViewStubCompat+IOnInflateListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

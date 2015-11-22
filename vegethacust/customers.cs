@@ -2,6 +2,7 @@
 using SQLite;
 using System.IO;
 using System.Collections.Generic;
+using System.Net;
 
 namespace vegethacust
 {
@@ -145,6 +146,51 @@ namespace vegethacust
 			var db = new SQLiteConnection (dbPath);
 			List<customers> ls = db.Query<customers> ("select * from customers where  _numero_tessera ='"+numerotessera+"'", new String[] {});
 			return ls[0];
+		}
+
+		public static void backupDB() {
+			string dbPath = Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db");
+			FileInfo f = new FileInfo (dbPath);
+			f.CopyTo(Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path , "cust.db"));
+				
+		}
+
+		public static string backupOverFTP()
+		{
+			try {
+				string ftpHost = "test.frungillo.org";
+				string ftpUser = "test_frungillo";
+				string ftpPassword = "genny.1975";
+				string ftpfullpath = "ftp://test.frungillo.org/ser/vegetha/cust.db";
+				FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
+
+				//userid and password for the ftp server  
+
+				ftp.Credentials = new NetworkCredential(ftpUser, ftpPassword);
+
+				ftp.KeepAlive = true;
+				ftp.UseBinary = true;
+				ftp.Method = WebRequestMethods.Ftp.UploadFile;
+
+				FileStream fs = File.OpenRead(Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db"));
+
+				byte[] buffer = new byte[fs.Length];
+				fs.Read(buffer, 0, buffer.Length);
+
+				fs.Close();
+
+				Stream ftpstream = ftp.GetRequestStream();
+				ftpstream.Write(buffer, 0, buffer.Length);
+				ftpstream.Close();
+				ftpstream.Flush();	
+			} catch (Exception ex) {
+				return "Errore Backup:" + ex.Message;
+
+			}
+			return "Backup Completato";
+
+
+
 		}
 	}
 }

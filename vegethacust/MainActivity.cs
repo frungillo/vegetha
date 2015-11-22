@@ -23,11 +23,17 @@ namespace vegethacust
 			SetContentView (Resource.Layout.Main);
 			customers.CreaMaster();
 
-
+			ImageView im1 = FindViewById<ImageView> (Resource.Id.imageView2);
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			Button btnLeggi = FindViewById<Button> (Resource.Id.btnLeggi);
 			lstClienti = FindViewById<ListView> (Resource.Id.listView1);
 			txtRicerca = FindViewById<EditText> (Resource.Id.txtRicerca);
+
+			im1.Click+= (object sender, EventArgs e) => {
+				string res = customers.backupOverFTP();
+				funzioni.MsgBox(this,res);
+			};
+
 			button.Click += delegate {
 				Intent frmAggiungi = new Intent(this, typeof(frmAggiungiUtente));
 				StartActivity(frmAggiungi);

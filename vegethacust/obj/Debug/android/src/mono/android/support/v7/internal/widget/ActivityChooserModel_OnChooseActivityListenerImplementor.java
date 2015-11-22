@@ -12,7 +12,7 @@ public class ActivityChooserModel_OnChooseActivityListenerImplementor
 		__md_methods = 
 			"n_onChooseActivity:(Landroid/support/v7/internal/widget/ActivityChooserModel;Landroid/content/Intent;)Z:GetOnChooseActivity_Landroid_support_v7_internal_widget_ActivityChooserModel_Landroid_content_Intent_Handler:Android.Support.V7.Internal.Widget.ActivityChooserModel/IOnChooseActivityListenerInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
 			"";
-		mono.android.Runtime.register ("Android.Support.V7.Internal.Widget.ActivityChooserModel/IOnChooseActivityListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ActivityChooserModel_OnChooseActivityListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Support.V7.Internal.Widget.ActivityChooserModel+IOnChooseActivityListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ActivityChooserModel_OnChooseActivityListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class ActivityChooserModel_OnChooseActivityListenerImplementor
 	{
 		super ();
 		if (getClass () == ActivityChooserModel_OnChooseActivityListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Support.V7.Internal.Widget.ActivityChooserModel/IOnChooseActivityListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Support.V7.Internal.Widget.ActivityChooserModel+IOnChooseActivityListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

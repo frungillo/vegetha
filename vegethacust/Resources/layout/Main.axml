@@ -24,7 +24,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/imageView2"
                 android:layout_weight="0.3"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:clickable="true" />
             <Button
                 android:text="Scaduti Oggi"
                 android:id="@+id/btnLeggi"
