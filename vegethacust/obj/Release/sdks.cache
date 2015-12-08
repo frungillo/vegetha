@@ -2,7 +2,7 @@
 <Sdk>
   <AndroidApiLevel>19</AndroidApiLevel>
   <AndroidApiLevelName>19</AndroidApiLevelName>
-  <AndroidNdkPath>/Users/Genny/Library/Developer/Xamarin/android-ndk/android-ndk-r10d</AndroidNdkPath>
+  <AndroidNdkPath>/Users/Genny/Library/Developer/Xamarin/android-ndk/android-ndk-r10e</AndroidNdkPath>
   <AndroidSdkBuildToolsPath>/Users/Genny/Library/Developer/Xamarin/android-sdk-mac_x86/build-tools/23.0.1</AndroidSdkBuildToolsPath>
   <AndroidSdkBuildToolsBinPath>/Users/Genny/Library/Developer/Xamarin/android-sdk-mac_x86/build-tools/23.0.1</AndroidSdkBuildToolsBinPath>
   <AndroidSdkPath>/Users/Genny/Library/Developer/Xamarin/android-sdk-mac_x86</AndroidSdkPath>
