@@ -128,7 +128,7 @@ namespace vegethacust
 							ls.Add (item);
 						}
 					}	
-				} catch (Exception ex) {
+				} catch (Exception) {
 					
 				}
 
@@ -158,7 +158,7 @@ namespace vegethacust
 		public static string backupOverFTP()
 		{
 			try {
-				string ftpHost = "test.frungillo.org";
+				//string ftpHost = "test.frungillo.org";
 				string ftpUser = "test_frungillo";
 				string ftpPassword = "genny.1975";
 				string ftpfullpath = "ftp://test.frungillo.org/ser/vegetha/cust.db";
@@ -195,14 +195,15 @@ namespace vegethacust
 
 		public static string restoreFromFTP() {
 			try {
-				string ftpHost = "test.frungillo.org";
+				//string ftpHost = "test.frungillo.org";
 				string ftpUser = "test_frungillo";
 				string ftpPassword = "genny.1975";
 				string ftpfullpath = "ftp://test.frungillo.org/ser/vegetha/cust.db";
-				DownloadFile(ftpUser,ftpPassword,ftpfullpath,""); //ragiona Qui!
+				DownloadFile(ftpUser,ftpPassword,ftpfullpath,Path.Combine( Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db")); //ragiona Qui!
 			} catch(Exception ex){
+				return ex.Message;
 			}
-			return "Backup Completato";
+			return "Ripristino Completato";
 		}
 
 		private static void DownloadFile(string userName, string password, string ftpSourceFilePath, string localDestinationFilePath)

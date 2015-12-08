@@ -41,6 +41,26 @@
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3">
+            <Button
+                android:text="Ripristina Dati"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnRipristina"
+                android:layout_weight="0.5" />
+            <Button
+                android:text="Backup Dati"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnBakupDati"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout2">

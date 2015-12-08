@@ -59,6 +59,8 @@
     <Compile Include="frmAggiungiUtente.cs" />
     <Compile Include="funzioni.cs" />
     <Compile Include="ClientiListAdapter.cs" />
+    <Compile Include="scheda.cs" />
+    <Compile Include="esercizi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

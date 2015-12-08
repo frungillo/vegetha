@@ -7,6 +7,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
+using System.IO;
+using System.Threading;
 
 namespace vegethacust
 {
@@ -16,6 +18,25 @@ namespace vegethacust
 		EditText txtRicerca;
 		ListView lstClienti;
 
+		private void RestoreData(){
+			string esito = "";
+			ProgressDialog d = new ProgressDialog (this);
+			d.SetCancelable (false);
+			d.SetMessage ("Attendere, ripristino in corso...");
+			d.SetTitle ("Ripristino...");
+
+
+			Thread t = new Thread (() => {
+				esito = customers.restoreFromFTP();
+				d.Dismiss();
+				RunOnUiThread(()=>{ funzioni.MsgBox(this,esito);});
+			});
+			d.Show ();
+			t.Start ();
+
+	
+		}
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -23,16 +44,32 @@ namespace vegethacust
 			SetContentView (Resource.Layout.Main);
 			customers.CreaMaster();
 
-			ImageView im1 = FindViewById<ImageView> (Resource.Id.imageView2);
+			//ImageView im1 = FindViewById<ImageView> (Resource.Id.imageView2);
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			Button btnLeggi = FindViewById<Button> (Resource.Id.btnLeggi);
 			lstClienti = FindViewById<ListView> (Resource.Id.listView1);
 			txtRicerca = FindViewById<EditText> (Resource.Id.txtRicerca);
+			Button btnBackup = FindViewById<Button> (Resource.Id.btnBakupDati);
+			Button btnRipristina = FindViewById<Button> (Resource.Id.btnRipristina);
 
-			im1.Click+= (object sender, EventArgs e) => {
+			btnBackup.Click+= (object sender, EventArgs e) => {
 				string res = customers.backupOverFTP();
 				funzioni.MsgBox(this,res);
 			};
+
+			btnRipristina.Click+= (sender, e) => {
+				FileInfo f = new FileInfo(Path.Combine( System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal), "cust.db"));
+				if (f.Exists && f.Length > 16000) {
+					funzioni.MsgBox(this,"Attenzione l'operazionie di ripristino sostituira tutti i dati presenti con quelli memorizzati nell'ultimo backup, procedo?",
+						"Ripristino Dati", "SI", 
+						()=>{ RestoreData();},
+						"NO");
+					
+				} else {
+					RestoreData();
+				}
+			};
+
 
 			button.Click += delegate {
 				Intent frmAggiungi = new Intent(this, typeof(frmAggiungiUtente));
