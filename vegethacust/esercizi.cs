@@ -14,8 +14,20 @@ namespace vegethacust
 		[PrimaryKey,  Column("_id_esercizio")]
 		public int IdEsercizio { get; set;}
 
+		[MaxLength(2), NotNull]
+		public string GruppoGiornata { get; set; }
+
+		[MaxLength(50), NotNull]
+		public string GruppoMuscolare { get; set; }
+
+		[NotNull]
+		public int NumeroTessera { get; set; }
+
 		[MaxLength(50),NotNull]
 		public string Descrizione { get; set;}
+
+		[MaxLength(50), NotNull]
+		public string Esecuzione { get; set; }
 
 
 		public esercizi ()
@@ -58,19 +70,13 @@ namespace vegethacust
 			db.Insert (this);
 		}
 
-		public static void AggiungiTutti(List<customers> c)
-		{
 
+
+		public static List<esercizi> GetByNumeroTessera(int numeroTessera) {
+			List<esercizi> ls = new List<esercizi>();
 			string dbPath = Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db");
 			var db = new SQLiteConnection (dbPath);
-			db.InsertAll (c);
-		}
-
-		public static List<customers> GetTutti() {
-			List<customers> ls = new List<customers>();
-			string dbPath = Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db");
-			var db = new SQLiteConnection (dbPath);
-			ls = db.Query<customers> ("select * from customers order by 2,3,5", new String[] {});
+			ls = db.Query<esercizi> ("select * from esercizi where NumeroTessera = "+numeroTessera+" order by 2,3", new String[] {});
 			/*
 			var table = db.Table<customers> ();
 			foreach (customers c in table) {
@@ -80,7 +86,7 @@ namespace vegethacust
 			return ls;
 		}
 
-		public static List<customers> GetByCognomeNome(string Cognome, string Nome) {
+		public static List<esercizi> GetByCognomeNome(string Cognome, string Nome) {
 			List<customers> ls = new List<customers> ();
 			string dbPath = Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.Personal), "cust.db");
 			var db = new SQLiteConnection (dbPath);
